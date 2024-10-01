@@ -2,4 +2,4 @@
 
 DATE=$(date)
 
-echo "eroju date and time entho telusa mama neku: $DATE"
+echo "eroju date and time entho telusa mama neku: ${DATE}"
