@@ -11,9 +11,19 @@ else
 fi
 
 sudo yum install mysql -y
-if [ $? -eq 0 ]
+if [ $? -ne 0 ]
 then
-echo "mysql install is success macha, enjoy pandago"
-else
 echo "mysql install is faileddd"
+exit 1
+else
+echo "mysql install is success macha, enjoy pandago"
+fi
+
+sudo yum install git -y
+if [ $? -ne 0 ]
+then
+echo "git install is faileddd"
+exit 1
+else
+echo "git install is success macha, enjoy pandago"
 fi
