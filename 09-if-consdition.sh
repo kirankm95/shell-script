@@ -6,5 +6,5 @@ if [ $NUMBER -gt 20 ]
 then
    echo "Orey nv enter chesina number 20 kanna peddhadhi roy"
 else
-   echo "Orey nv enter chesina number 20 kanna chinnadhi ehey"
+   echo "BABUU nv enter chesina number 20 kanna chinnadhi ehey"
 fi
