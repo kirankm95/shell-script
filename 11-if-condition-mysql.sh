@@ -8,11 +8,12 @@ then
    exit 1
 else
    echo "Hello root user, thx for coming, how r u, install chey mari mysql ni"
-   sudo yum install zip -y
-        if [ $? -eq 0 ]
-        then
-            echo "mysql install is success macha, enjoy pandago"
-        else
-            echo "mysql install is faileddd"
-        fi
+fi
+
+sudo yum install mysql -y
+if [ $? -eq 0 ]
+then
+echo "mysql install is success macha, enjoy pandago"
+else
+echo "mysql install is faileddd"
 fi
