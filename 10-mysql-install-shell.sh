@@ -14,4 +14,5 @@ else
         echo "mysql install is success macha, enjoy pandago"
     else
         echo "mysql install is faileddd"
+    fi
 fi
