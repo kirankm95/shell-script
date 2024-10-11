@@ -4,6 +4,8 @@ ID=$(id -u)
 DATE=$(date +%F-%H-%M-%S)
 LOGFILE=/tmp/$0-$DATE
 
+echo "this script $0 is started executing macha"
+
 VALIDATE() {
     if [ $1 -ne 0 ]
     then
