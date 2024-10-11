@@ -2,6 +2,7 @@
 
 ID=$(id -u)
 DATE=$(date +%F-%H-%M-%S)
+LOGFILE=/tmp/$0-$DATE
 
 VALIDATE() {
     if [ $1 -ne 0 ]
