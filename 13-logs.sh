@@ -1,11 +1,11 @@
 #!/bin/bash
 
 ID=$(id -u)
-DATE=$(date +%F-%H-%M-%S)
-LOGFILE="/tmp/$0-$DATE"
+TIMESTAMP=$(date +%F-%H-%M-%S)
+LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
 echo "this script $0 is started executing macha"
-echo "script $0 started executing at $DATE" >> $LOGFILE
+echo "script $0 started executing at $TIMESTAMP" &>> $LOGFILE
 
 VALIDATE() {
     if [ $1 -ne 0 ]
@@ -25,7 +25,7 @@ else
    echo "Hello root user, thx for coming, how r u, install chey mari mysql ni"
 fi
 
-sudo yum install mysql -y
-VALIDATE $? mysql >> $LOGFILE
-sudo yum install git -y
-VALIDATE $? git >> $LOGFILE
+sudo yum install mysql -y &>> $LOGFILE
+VALIDATE $? mysql &>> $LOGFILE
+sudo yum install git -y &>> $LOGFILE
+VALIDATE $? git &>> $LOGFILE
