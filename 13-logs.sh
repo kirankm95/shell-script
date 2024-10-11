@@ -5,8 +5,8 @@ TIMESTAMP=$(date +%F-%H-%M-%S)
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
 R="\e[31m"
 G="\e[32m"
-Y=\e[33m
-N=\e[0m
+Y="\e[33m"
+N="\e[0m"
 
 echo -e "this script $Y $0 $N is started executing macha" &>> $LOGFILE
 echo -e "script $Y $0 $N started executing at $TIMESTAMP" &>> $LOGFILE
