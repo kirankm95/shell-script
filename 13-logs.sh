@@ -30,6 +30,6 @@ else
 fi
 
 sudo yum install mysql -y &>> $LOGFILE
-VALIDATE $? mysql
+VALIDATE $? mysql &>> $LOGFILE
 sudo yum install git -y &>> $LOGFILE
-VALIDATE $? git
+VALIDATE $? git &>> $LOGFILE
