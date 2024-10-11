@@ -4,7 +4,7 @@ ID=$(id -u)
 TIMESTAMP=$(date +%F-%H-%M-%S)
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
-echo "this script $0 is started executing macha"
+echo "this script $0 is started executing macha" &>> $LOGFILE
 echo "script $0 started executing at $TIMESTAMP" &>> $LOGFILE
 
 VALIDATE() {
