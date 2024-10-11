@@ -2,9 +2,10 @@
 
 ID=$(id -u)
 DATE=$(date +%F-%H-%M-%S)
-LOGFILE=/tmp/$0-$DATE
+LOGFILE="/tmp/$0-$DATE"
 
 echo "this script $0 is started executing macha"
+echo "script $0 started executing at $DATE" >> $LOGFILE
 
 VALIDATE() {
     if [ $1 -ne 0 ]
@@ -25,6 +26,6 @@ else
 fi
 
 sudo yum install mysql -y
-VALIDATE $? mysql
+VALIDATE $? mysql >> $LOGFILE
 sudo yum install git -y
-VALIDATE $? git
+VALIDATE $? git >> $LOGFILE
