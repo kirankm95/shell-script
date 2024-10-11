@@ -5,7 +5,7 @@ do
     echo "Loop spin:" $i
 done
 
-for i in {1..100000000}
+for i in {1..100000}
 do 
     echo "$i"
 done
