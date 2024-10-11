@@ -3,26 +3,30 @@
 ID=$(id -u)
 TIMESTAMP=$(date +%F-%H-%M-%S)
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
+R=\e[31m
+G=\e[32m
+Y=\e[33m
+N=\e[0m
 
-echo "this script $0 is started executing macha" &>> $LOGFILE
-echo "script $0 started executing at $TIMESTAMP" &>> $LOGFILE
+echo -e "this script $Y $0 $N is started executing macha" &>> $LOGFILE
+echo -e "script $Y $0 $N started executing at $TIMESTAMP" &>> $LOGFILE
 
 VALIDATE() {
     if [ $1 -ne 0 ]
     then
-        echo "$2 install is faileddd"
+        echo -e "$2 $R install is faileddd $N"
         exit 1
     else
-        echo "$2 install is success macha, enjoy pandago"
+        echo -e "$2 $G install is success macha, enjoy pandago $N"
     fi
 }
 
 if [ $ID -ne 0 ]
 then
-   echo "Orey nv root user kadhu, velli root user gadini rammanu, pooo"
+   echo -e "$R Orey nv root user kadhu, velli root user gadini rammanu, pooo $N"
    exit 1
 else
-   echo "Hello root user, thx for coming, how r u, install chey mari mysql ni"
+   echo -e "$G Hello root user, thx for coming, how r u, install chey mari mysql ni $N"
 fi
 
 sudo yum install mysql -y &>> $LOGFILE
